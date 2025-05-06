@@ -1,0 +1,243 @@
+# Medantra Design Guidelines
+
+## Overview
+
+This document outlines the design language and theme rules used in the Medantra application. It serves as a reference for maintaining design consistency across all components and pages. The design system is implemented using Tailwind CSS, with custom theme configurations defined in `tailwind.config.js`.
+
+## Color Palette
+
+### Primary Colors
+The primary color palette is a teal/blue-green gradient that conveys a sense of trust, professionalism, and healthcare reliability.
+
+```
+medantra-primary-50:  #ebf9f8 - Lightest tint (backgrounds, hover states)
+medantra-primary-100: #c6ede9 - Very light tint (backgrounds, borders)
+medantra-primary-200: #9fe1da - Light tint (backgrounds, hover effects)
+medantra-primary-300: #75d4ca - Mid-light tint (secondary elements)
+medantra-primary-400: #4cc8ba - Light accent (highlights)
+medantra-primary-500: #2cbcac - Standard accent (buttons, highlights)
+medantra-primary-600: #0f766e - Main primary color (primary buttons, important elements)
+medantra-primary-700: #0d5f58 - Dark shade (hover states for primary elements)
+medantra-primary-800: #0a4842 - Darker shade (active states)
+medantra-primary-900: #07302c - Darkest shade (extreme contrast)
+```
+
+### Secondary Colors
+A complementary warmer teal/turquoise palette that works with the primary colors for visual hierarchy.
+
+```
+medantra-secondary-50:  #effcf6 - Lightest tint
+medantra-secondary-100: #d0f5e6 - Very light tint
+medantra-secondary-200: #a4ead0 - Light tint
+medantra-secondary-300: #6dd9b6 - Mid-light tint
+medantra-secondary-400: #40c39e - Light accent
+medantra-secondary-500: #2ca58a - Main secondary color (secondary buttons, accents)
+medantra-secondary-600: #208573 - Dark accent (hover states)
+medantra-secondary-700: #1a6b5c - Darker accent
+medantra-secondary-800: #155145 - Very dark accent
+medantra-secondary-900: #0e3b33 - Darkest accent
+```
+
+### State Colors
+
+```
+medantra-success: #059669 - Success states, confirmations, positive indicators
+medantra-warning: #ca8a04 - Warning states, cautions, moderate alerts
+medantra-error:   #dc2626 - Error states, critical alerts, destructive actions
+```
+
+### Neutral Colors
+Used for text, backgrounds, borders, and other UI elements.
+
+```
+medantra-neutral-50:  #f9fafb - Lightest background
+medantra-neutral-100: #f3f4f6 - Light background, hover states 
+medantra-neutral-200: #e5e7eb - Borders, dividers
+medantra-neutral-300: #d1d5db - Disabled elements
+medantra-neutral-400: #9ca3af - Placeholder text
+medantra-neutral-500: #6b7280 - Secondary text
+medantra-neutral-600: #4b5563 - Primary text
+medantra-neutral-700: #374151 - Emphasized text
+medantra-neutral-800: #1f2937 - Headings
+medantra-neutral-900: #111827 - High-contrast text
+```
+
+## Typography
+
+### Font Family
+Two primary font families are used throughout the application:
+
+```
+font-sans: ['Inter', 'system-ui', 'sans-serif'] - Primary text font
+font-display: ['Lexend', 'system-ui', 'sans-serif'] - Headings and display text
+```
+
+### Font Sizes
+Follow the standard Tailwind font size scale for consistency:
+
+- text-xs: Small text (legal, footnotes)
+- text-sm: Small text (secondary information)
+- text-base: Default body text
+- text-lg: Slightly larger body text
+- text-xl: Subtitles
+- text-2xl: Small headings
+- text-3xl: Section headings
+- text-4xl: Page headings
+- text-5xl: Large display headings
+- text-6xl: Hero/jumbo headings
+
+### Font Weight
+Use semantic font weights:
+
+- font-light: Light text
+- font-normal: Regular text
+- font-medium: Medium emphasis
+- font-semibold: High emphasis, subheadings
+- font-bold: Headings, important elements
+- font-extrabold: Special display text
+
+## Spacing System
+
+Custom spacing scale:
+
+```
+4xs: 0.125rem (2px)
+3xs: 0.25rem  (4px)
+2xs: 0.375rem (6px)
+xs:  0.5rem   (8px)
+sm:  0.75rem  (12px)
+md:  1rem     (16px)
+lg:  1.25rem  (20px)
+xl:  1.5rem   (24px)
+2xl: 2rem     (32px)
+3xl: 2.5rem   (40px)
+4xl: 3rem     (48px)
+```
+
+## Border Radius
+
+```
+rounded-sm: 0.25rem  (4px)
+rounded-md: 0.375rem (6px)
+rounded-lg: 0.5rem   (8px)
+rounded-xl: 0.75rem  (12px)
+rounded-2xl: 1rem    (16px)
+```
+
+## Shadows
+
+```
+shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05)
+shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)
+shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)
+shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)
+```
+
+## Common Component Patterns
+
+### Buttons
+
+Primary Button:
+```
+px-8 py-3 bg-medantra-secondary-500 hover:bg-medantra-secondary-600 text-white font-medium rounded-lg transition-colors shadow-lg hover:shadow-xl
+```
+
+Secondary/Outline Button:
+```
+px-8 py-3 bg-transparent border border-white text-white hover:bg-white hover:bg-opacity-10 font-medium rounded-lg transition-all
+```
+
+### Cards
+
+Standard Card:
+```
+bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6
+```
+
+Feature Card:
+```
+bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 flex flex-col items-center text-center
+```
+
+### Section Headers
+
+```
+<div className="text-center mb-12">
+  <h2 className="text-3xl font-display font-bold text-medantra-neutral-900 mb-4">Section Title</h2>
+  <p className="text-xl text-medantra-neutral-600 max-w-2xl mx-auto">
+    Section description text
+  </p>
+</div>
+```
+
+### Gradients
+
+Hero Background:
+```
+bg-gradient-to-br from-medantra-primary-700 to-medantra-primary-900
+```
+
+Call to Action Background:
+```
+bg-gradient-to-br from-medantra-secondary-600 to-medantra-secondary-800
+```
+
+### Icons
+
+Icons use a consistent style with the following classes:
+```
+h-5 w-5 (small)
+h-6 w-6 (medium)
+h-12 w-12 (large/feature)
+```
+
+## Page Structure
+
+### Layout Containers
+
+Main content container:
+```
+max-w-7xl mx-auto px-4 sm:px-6 lg:px-8
+```
+
+### Responsive Patterns
+
+Mobile-first with common breakpoints:
+```
+grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8
+```
+
+### Common Section Padding
+
+```
+py-12 px-4 sm:px-6 lg:px-8 (standard section)
+py-16 px-4 sm:px-6 lg:px-8 (larger section)
+py-24 px-4 sm:px-6 lg:px-8 (hero section)
+```
+
+## Usage Guidelines
+
+1. Maintain consistent color usage:
+   - Primary colors for brand identity and main interactions
+   - Secondary colors for supporting elements
+   - State colors only for their semantic meaning
+
+2. Typography hierarchy:
+   - Use font-display for headings
+   - Use font-sans for body text
+   - Maintain consistent heading levels (h1, h2, h3)
+
+3. Responsive design:
+   - Always design mobile-first
+   - Use appropriate grid layouts at different breakpoints
+
+4. Component consistency:
+   - Use established patterns for common elements
+   - Maintain consistent spacing within and between components
+
+5. Accessibility:
+   - Ensure sufficient color contrast
+   - Use semantic HTML elements
+   - Include appropriate ARIA attributes for complex interactions
+
+Note: This design system is implemented using Tailwind CSS with the custom theme defined in `tailwind.config.js`. Always refer to this file for the most up-to-date configuration.
