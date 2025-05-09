@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-multipart
+pillow
+PyMuPDF
+cohere
+python-dotenv
+google-genai
+aiofiles
+numpy      # if you're handling file uploads with FastAPI's UploadFile
+
+

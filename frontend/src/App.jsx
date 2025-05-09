@@ -5,7 +5,8 @@ import Login from './components/auth/Login';
 import Signup from './components/auth/Signup';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard'; 
-import GeminiTest from './pages/GeminiTest'; // Import the new GeminiTest component
+import GeminiTest from './pages/GeminiTest';
+import ImageEmbedTest from './pages/ImageEmbedTest'; // Import the image embedding test component
 import './App.css';
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/gemini-test" element={<GeminiTest />} /> {/* Add the new GeminiTest route */}
+            <Route path="/gemini-test" element={<GeminiTest />} />
+            <Route path="/image-embed-test" element={<ImageEmbedTest />} /> {/* Add the new ImageEmbedTest route */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
         </div>

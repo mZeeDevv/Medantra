@@ -56,16 +56,16 @@ const NavigationBar = () => {
             <Link to="/" className="flex items-center group">
               {isScrolled ? (
                 <div className="flex items-center space-x-1">
-                  <span className="h-8 w-8 bg-gradient-to-br from-medantra-primary-600 to-medantra-secondary-600 rounded-full flex items-center justify-center text-white font-bold text-lg">M</span>
+                  <span className="h-8 w-8 bg-gradient-to-br from-medantra-primary-600 to-medantra-secondary-600 rounded-full flex items-center justify-center text-white font-bold text-lg">R</span>
                   <span className="text-2xl font-display font-bold bg-gradient-to-r from-medantra-primary-700 to-medantra-secondary-600 bg-clip-text text-transparent group-hover:from-medantra-primary-600 group-hover:to-medantra-secondary-500 transition-all">
-                    Medantra
+                    ReviveRx
                   </span>
                 </div>
               ) : (
                 <div className="flex items-center space-x-1">
-                  <span className="h-9 w-9 bg-white/90 rounded-full flex items-center justify-center text-medantra-primary-700 font-bold text-lg shadow-lg">M</span>
+                  <span className="h-9 w-9 bg-white/90 rounded-full flex items-center justify-center text-medantra-primary-700 font-bold text-lg shadow-lg">R</span>
                   <span className="text-2xl font-display font-bold text-white group-hover:text-medantra-primary-100 transition-colors">
-                    Medantra
+                    ReviveRx
                   </span>
                 </div>
               )}
@@ -73,13 +73,13 @@ const NavigationBar = () => {
           </div>
 
           {/* Desktop navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-1">
-            {[
+          <div className="hidden md:flex md:items-center md:space-x-1">            {[
               { name: 'Home', path: '/' },
               { name: 'About', path: '/about' },
               { name: 'Services', path: '/services' },
               { name: 'Health Blog', path: '/blog' },
-              { name: 'Gemini Test', path: '/gemini-test' } // Add Gemini Test to navigation
+              { name: 'Gemini Test', path: '/gemini-test' },
+              { name: 'Image Embed Test', path: '/image-embed-test' } // Add Image Embed Test to navigation
             ].map((item) => (
               <Link 
                 key={item.name}
