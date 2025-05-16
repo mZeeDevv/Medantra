@@ -5,7 +5,7 @@ const ChatInterface = ({ isAuthenticated = false, dashboardMode = false }) => {
     {
       id: 1,
       sender: 'ai',
-      content: 'Hello! I\'m ReviveRx AI, your medical assistant. How can I help you today?',
+      content: 'Hello! I\'m Medantra AI, your medical assistant. How can I help you today?',
       timestamp: new Date()
     }
   ]);
@@ -125,7 +125,7 @@ const ChatInterface = ({ isAuthenticated = false, dashboardMode = false }) => {
   return (
     <div className="flex flex-col h-full bg-white rounded-xl shadow-lg overflow-hidden">
       <div className="bg-gradient-to-r from-medantra-primary-600 to-medantra-primary-700 p-4">
-        <h2 className="text-white text-lg font-semibold">ReviveRx AI Health Assistant</h2>
+        <h2 className="text-white text-lg font-semibold">Medantra AI Health Assistant</h2>
         <p className="text-medantra-primary-100 text-sm">
           {isAuthenticated 
             ? 'Personalized medical guidance based on your health profile' 

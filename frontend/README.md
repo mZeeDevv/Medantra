@@ -1,6 +1,6 @@
-# ReviveRx
+# Medantra
 
-ReviveRx is a healthcare management application built with React and Firebase.
+Medantra is a healthcare management application built with React and Firebase.
 
 ## Features
 

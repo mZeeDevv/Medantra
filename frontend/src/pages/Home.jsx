@@ -165,7 +165,7 @@ const Home = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-display font-bold text-medantra-neutral-900 mb-4">Comprehensive Healthcare Features</h2>
           <p className="text-xl text-medantra-neutral-600 max-w-2xl mx-auto">
-            ReviveRx provides intelligent tools to help you manage your health effectively
+            Medantra provides intelligent tools to help you manage your health effectively
           </p>
         </div>
 
